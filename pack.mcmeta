@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "Logs, Stripped Logs & Woods drop 4 planks (Silk Touch keeps the original block)",
+    "pack_format": 61,
+    "supported_formats": {
+      "min_inclusive": 48,
+      "max_inclusive": 88
+    }
+  }
+}
