@@ -4,11 +4,6 @@
     {
       "rolls": 1.0,
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -16,41 +11,42 @@
             {
               "type": "minecraft:item",
               "name": "minecraft:stripped_pale_oak_wood",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+              "condition": {
+                "predicate": {
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
-                }
-              ]
+                },
+                "type": "minecraft:match_tool"
+              }
             },
             {
               "type": "minecraft:item",
               "name": "minecraft:pale_oak_planks",
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:set_count",
                   "count": 4,
-                  "add": false
+                  "add": false,
+                  "type": "minecraft:set_count"
                 },
                 {
-                  "function": "minecraft:explosion_decay"
+                  "type": "minecraft:explosion_decay"
                 }
               ]
             }
           ]
         }
-      ]
+      ],
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      }
     }
   ],
   "random_sequence": "minecraft:blocks/stripped_pale_oak_wood"
